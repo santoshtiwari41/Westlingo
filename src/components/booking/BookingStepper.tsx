@@ -86,19 +86,6 @@ export default function BookingStepper() {
     )
   );
 
-  const isStepComplete = (stepIndex: number) => {
-    switch (stepIndex) {
-      case 0:
-        return userInfo.name && userInfo.email && userInfo.phone;
-      case 1:
-        return testDetails.date && testDetails.time && testDetails.slotId;
-      case 2:
-        return reservationId;
-      default:
-        return false;
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <div className="container mx-auto px-4 py-8">
