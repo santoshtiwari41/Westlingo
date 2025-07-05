@@ -1,0 +1,1 @@
+ALTER TABLE "course_pricings" ADD COLUMN "is_active" boolean DEFAULT false NOT NULL;

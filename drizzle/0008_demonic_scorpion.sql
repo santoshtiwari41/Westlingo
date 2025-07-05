@@ -1,0 +1,3 @@
+ALTER TABLE "course_pricing_features" RENAME TO "course_pricing_items";--> statement-breakpoint
+ALTER TABLE "course_pricing_items" ADD COLUMN "pricing_id" text NOT NULL;--> statement-breakpoint
+ALTER TABLE "course_pricing_items" ADD CONSTRAINT "course_pricing_items_pricing_id_course_pricings_id_fk" FOREIGN KEY ("pricing_id") REFERENCES "public"."course_pricings"("id") ON DELETE cascade ON UPDATE no action;

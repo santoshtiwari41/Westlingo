@@ -1,0 +1,1 @@
+ALTER TABLE "session" RENAME COLUMN "user_Course" TO "user_agent";

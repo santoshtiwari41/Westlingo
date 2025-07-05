@@ -1,0 +1,2 @@
+ALTER TABLE "education" ADD CONSTRAINT "education_user_id_unique" UNIQUE("user_id");--> statement-breakpoint
+ALTER TABLE "education" ADD CONSTRAINT "education_user_id_degree_unique" UNIQUE("user_id","degree");

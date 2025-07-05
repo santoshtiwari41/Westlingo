@@ -1,0 +1,1 @@
+ALTER TABLE "course_pricing_items" ADD COLUMN "is_featured" boolean DEFAULT false NOT NULL;

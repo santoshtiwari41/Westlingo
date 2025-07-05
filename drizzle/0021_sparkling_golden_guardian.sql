@@ -1,0 +1,1 @@
+ALTER TABLE "education" DROP CONSTRAINT "education_user_id_unique";

@@ -1,0 +1,1 @@
+ALTER TABLE "course_carousels" ALTER COLUMN "title" DROP NOT NULL;

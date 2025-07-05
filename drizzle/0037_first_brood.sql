@@ -1,0 +1,2 @@
+ALTER TABLE "course_pricings" ADD COLUMN "online_coaching_benefits" text[] DEFAULT '{"Flexible scheduling","Affordable pricing","Personalized approach Classes","Online expert 1-1 & group sessions","Perfect for academic or general training IELTS"}' NOT NULL;--> statement-breakpoint
+ALTER TABLE "course_pricings" ADD COLUMN "online_coaching_benefits_url" text DEFAULT 'https://res.cloudinary.com/dfrb7mglo/image/upload/v1751477715/courses/lnga57td7yjaayosv6r5.webp' NOT NULL;

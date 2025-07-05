@@ -1,0 +1,3 @@
+-- ALTER TABLE "testimonials" DROP CONSTRAINT "testimonials_author_id_user_id_fk";
+--> statement-breakpoint
+-- ALTER TABLE "testimonials" DROP COLUMN "author_id";
