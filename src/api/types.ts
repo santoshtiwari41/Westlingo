@@ -29,8 +29,8 @@ export interface UserProfile {
   lastName?: string;
   phoneNumber?: string;
   dob?: string;
-  cv?: any;
-  passport?: any;
+  cv?: unknown;
+  passport?: unknown;
   citizenship?: any;
   permanentAddress?: any;
   temporaryAddress?: any;

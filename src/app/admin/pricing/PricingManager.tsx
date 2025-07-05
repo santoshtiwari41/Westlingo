@@ -1,13 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { UploadCloudIcon, XIcon } from "lucide-react";
 import { toast } from "sonner";
 
 import { uploadToCloudinary } from "@/actions/cloudinary";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Select,
@@ -18,7 +18,6 @@ import {
 } from "@/components/ui/select";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PricingsForm from "@/modules/admin/common/pricings/components/form/pricings-form";
-import PricingsPreview from "@/modules/admin/common/pricings/components/pricings-preview";
 import { useTRPC } from "@/trpc/client";
 
 import PricingTabContent from "./PricingTabContent";
@@ -232,9 +231,11 @@ const PricingManager = () => {
             <div className="mb-2 text-sm text-gray-400">Loading...</div>
           ) : qrUrl ? (
             <div className="mb-2 flex w-full flex-col items-center">
-              <img
+              <Image
                 src={qrUrl}
                 alt="QR Preview"
+                width={128}
+                height={128}
                 className="mb-2 h-32 w-32 rounded border object-contain"
               />
               <Button

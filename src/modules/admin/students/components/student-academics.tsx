@@ -4,22 +4,13 @@ import { useState } from "react";
 
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import {
-  Award,
-  BarChart3,
-  BookOpen,
-  Calendar,
-  CheckCircle,
-  Clock,
   Edit,
-  Eye,
   GraduationCap,
   Loader2,
   MoreHorizontal,
   Plus,
   Save,
-  Target,
   Trash2,
-  TrendingUp,
   X,
 } from "lucide-react";
 import { toast } from "sonner";

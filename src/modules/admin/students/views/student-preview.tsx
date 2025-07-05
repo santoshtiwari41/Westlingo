@@ -3,18 +3,7 @@
 import { useState } from "react";
 
 import { useSuspenseQuery } from "@tanstack/react-query";
-import {
-  Calendar,
-  CheckCircle,
-  CreditCard,
-  FileText,
-  GraduationCap,
-  Mail,
-  MapPin,
-  Phone,
-  User,
-  XCircle,
-} from "lucide-react";
+import { CheckCircle, Mail, MapPin, Phone, User, XCircle } from "lucide-react";
 
 import GeneratedAvatar from "@/components/common/generated-avatar";
 import { Badge } from "@/components/ui/badge";
@@ -40,14 +29,9 @@ export default function StudentPreview({ data }: { data: GetStudent }) {
   const [activeTab, setActiveTab] = useState("overview");
   const trpc = useTRPC();
 
-  const { data: reservations = [], refetch: refetchReservations } =
-    useSuspenseQuery(
-      trpc.students.getStudentReservations.queryOptions({ id: data.id })
-    );
-
-  const refetchData = () => {
-    refetchReservations();
-  };
+  const { data: reservations = [] } = useSuspenseQuery(
+    trpc.students.getStudentReservations.queryOptions({ id: data.id })
+  );
 
   const getStatusColor = (verified: boolean) => {
     return verified ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800";

@@ -1,6 +1,5 @@
 import React from "react";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import PricingsPreview from "@/modules/admin/common/pricings/components/pricings-preview";
 

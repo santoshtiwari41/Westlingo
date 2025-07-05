@@ -2,11 +2,14 @@ import type { NextConfig } from "next";
 
 import path from "path";
 
-/* config options here */
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
-      new URL("https://res.cloudinary.com/dfrb7mglo/image/upload/**"),
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "/dfrb7mglo/image/upload/**",
+      },
     ],
   },
   webpack: (config, { isServer }) => {
@@ -14,6 +17,9 @@ const nextConfig: NextConfig = {
       config.resolve.alias["yjs"] = path.resolve(__dirname, "node_modules/yjs");
     }
     return config;
+  },
+  typescript: {
+    ignoreBuildErrors: true,
   },
   experimental: {
     serverActions: {

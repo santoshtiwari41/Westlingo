@@ -1,6 +1,6 @@
 import { useTRPC } from "@/trpc/client";
 
-import type { Course, GetCoursesParams, PaginatedResponse } from "./types";
+import type { GetCoursesParams } from "./types";
 
 export const useCourses = () => {
   const trpc = useTRPC();

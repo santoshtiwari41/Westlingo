@@ -1,13 +1,7 @@
 import { Reservationstatus } from "@/modules/admin/reservations/types";
 import { useTRPC } from "@/trpc/client";
 
-import type {
-  BookingDetails,
-  CreateReservationData,
-  GetReservationsParams,
-  Reservation,
-  UserInfo,
-} from "./types";
+import type { GetReservationsParams } from "./types";
 
 export const useBookings = () => {
   const trpc = useTRPC();

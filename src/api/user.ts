@@ -1,7 +1,5 @@
 import { useTRPC } from "@/trpc/client";
 
-import type { UpdateUserProfileData, User, UserProfile } from "./types";
-
 export const useUser = () => {
   const trpc = useTRPC();
 
